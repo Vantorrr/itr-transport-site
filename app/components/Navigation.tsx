@@ -35,9 +35,9 @@ export default function Navigation({ isLoading = false }: NavigationProps) {
       href: '/team', 
       icon: Users,
       dropdown: [
-        { name: 'ИТР Лаборатория', href: '/team#laboratory' },
-        { name: 'Эксперты', href: '/team#team-sections' },
-        { name: 'Консультанты', href: '/team#team-sections' }
+        { name: 'ИТР', href: '/team#itr' },
+        { name: 'Эксперты', href: '/team#experts' },
+        { name: 'Проекты', href: '/team#projects' }
       ]
     },
     { 
@@ -45,11 +45,13 @@ export default function Navigation({ isLoading = false }: NavigationProps) {
       href: '/solutions', 
       icon: Settings,
       dropdown: [
-        { name: 'Мобильность', href: '/solutions/mobility' },
-        { name: 'Транспортное моделирование', href: '/solutions/modeling' },
-        { name: 'Исследования', href: '/solutions/research' },
-        { name: 'Консультирование', href: '/solutions/consulting' },
-        { name: 'Образование', href: '/solutions/education' }
+        { name: 'Вопросы мобильности', href: '/solutions/mobility-issues' },
+        { name: 'Прогнозирование', href: '/solutions/forecasting' },
+        { name: 'Проектирование', href: '/solutions/design' },
+        { name: 'Научные исследования', href: '/solutions/research' },
+        { name: 'Технический консалтинг', href: '/solutions/consulting' },
+        { name: 'Подготовка кадров', href: '/solutions/training' },
+        { name: 'Международное сотрудничество', href: '/solutions/international' }
       ]
     },
     { 

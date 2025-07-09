@@ -79,8 +79,8 @@ export default function TeamPage() {
         </div>
       </section>
 
-      {/* Team Sections */}
-      <section id="team-sections" className="py-20 bg-white">
+      {/* Experts Section */}
+      <section id="experts" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-20">
             {teamSections.map((section, index) => (
@@ -134,8 +134,8 @@ export default function TeamPage() {
         </div>
       </section>
 
-      {/* Laboratory Section */}
-      <section id="laboratory" className="py-20 bg-gray-50">
+      {/* ITR Section */}
+      <section id="itr" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -246,8 +246,55 @@ export default function TeamPage() {
         </div>
       </section>
 
+      {/* Projects Section */}
+      <section id="projects" className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+              Наши проекты
+            </h2>
+            <p className="text-xl text-gray-600">
+              Успешно реализованные и текущие проекты команды
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              { name: 'Мацеста', status: 'Завершён', color: 'green' },
+              { name: 'Вокзал Сочи', status: 'В процессе', color: 'blue' },
+              { name: 'Геленджик', status: 'Планируется', color: 'orange' },
+              { name: 'Новороссийск', status: 'В процессе', color: 'blue' }
+            ].map((project, index) => (
+              <motion.div
+                key={project.name}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"
+              >
+                <h3 className="text-xl font-bold text-primary mb-2">{project.name}</h3>
+                <div className={`inline-block px-3 py-1 rounded-full text-sm font-medium ${
+                  project.color === 'green' ? 'bg-green-100 text-green-800' :
+                  project.color === 'blue' ? 'bg-blue-100 text-blue-800' :
+                  'bg-orange-100 text-orange-800'
+                }`}>
+                  {project.status}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
