@@ -35,9 +35,9 @@ export default function Navigation({ isLoading = false }: NavigationProps) {
       href: '/team', 
       icon: Users,
       dropdown: [
-        { name: 'ИТР Лаборатория', href: '/team/itr' },
-        { name: 'Эксперты', href: '/team/experts' },
-        { name: 'Консультанты', href: '/team/consultants' }
+        { name: 'ИТР Лаборатория', href: '/team#laboratory' },
+        { name: 'Эксперты', href: '/team#team-sections' },
+        { name: 'Консультанты', href: '/team#team-sections' }
       ]
     },
     { 

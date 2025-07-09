@@ -80,7 +80,7 @@ export default function TeamPage() {
       </section>
 
       {/* Team Sections */}
-      <section className="py-20 bg-white">
+      <section id="team-sections" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-20">
             {teamSections.map((section, index) => (
@@ -135,7 +135,7 @@ export default function TeamPage() {
       </section>
 
       {/* Laboratory Section */}
-      <section className="py-20 bg-gray-50">
+      <section id="laboratory" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -194,8 +194,8 @@ export default function TeamPage() {
                   className="w-full h-64 object-cover rounded-lg"
                   poster="/images/lab-poster.jpg"
                 >
-                  <source src="/videos/hero-video.mp4" type="video/mp4" />
-                  <source src="/videos/hero-video.webm" type="video/webm" />
+                  <source src="/videos/laboratory-video.mp4" type="video/mp4" />
+                  <source src="/videos/laboratory-video.webm" type="video/webm" />
                   Ваш браузер не поддерживает видео.
                 </video>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent pointer-events-none"></div>

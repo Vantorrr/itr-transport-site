@@ -67,10 +67,27 @@ export default function Home() {
           {/* Beautiful gradient background */}
           <div className="absolute inset-0 bg-gradient-to-br from-primary via-secondary to-primary z-0"></div>
           
+          {/* Background Video */}
+          <div className="absolute inset-0 z-10">
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="auto"
+              className="absolute inset-0 w-full h-full object-cover"
+            >
+              <source src="/videos/intro-video.mp4" type="video/mp4" />
+              <source src="/videos/intro-video.webm" type="video/webm" />
+            </video>
+            {/* Video overlay for better text readability */}
+            <div className="absolute inset-0 bg-black/30"></div>
+          </div>
+          
           {/* Animated particles */}
           <motion.div
             style={{ y: y1, willChange: 'transform' }}
-            className="absolute inset-0 opacity-20 z-10"
+            className="absolute inset-0 opacity-20 z-20"
           >
             <div className="particle-container">
               {[...Array(30)].map((_, i) => (
