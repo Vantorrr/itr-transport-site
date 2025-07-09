@@ -10,7 +10,7 @@ import {
   Target,
   Zap,
   Shield,
-  Traffic
+  Car
 } from 'lucide-react'
 import Navigation from '../../components/Navigation'
 
@@ -37,7 +37,7 @@ export default function MobilityIssuesPage() {
       description: 'Современные системы управления дорожным движением',
       image: '/images/traffic-management.jpg',
       href: '/solutions/mobility-issues/traffic-management', 
-      icon: Traffic,
+      icon: Car,
       color: 'purple'
     },
     {
