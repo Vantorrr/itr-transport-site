@@ -186,11 +186,23 @@ export default function TeamPage() {
                 Для формирования действительно эффективных решений для исследуемых участков.
               </p>
               
-              <div className="bg-gray-50 rounded-lg p-4">
-                <h4 className="font-semibold text-primary mb-2">ВИДЕО о лаборатории (оно есть)</h4>
-                <p className="text-sm text-gray-600">
-                  Подробнее о работе нашей лаборатории в видеоматериалах
-                </p>
+              {/* Laboratory Video */}
+              <div className="relative rounded-lg overflow-hidden bg-gray-900">
+                <video
+                  controls
+                  preload="metadata"
+                  className="w-full h-64 object-cover rounded-lg"
+                  poster="/images/lab-poster.jpg"
+                >
+                  <source src="/videos/hero-video.mp4" type="video/mp4" />
+                  <source src="/videos/hero-video.webm" type="video/webm" />
+                  Ваш браузер не поддерживает видео.
+                </video>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent pointer-events-none"></div>
+                <div className="absolute bottom-4 left-4 text-white">
+                  <h4 className="font-semibold mb-1">ЛАБОРАТОРИЯ ИТР в работе</h4>
+                  <p className="text-sm opacity-90">Процессы сбора и анализа данных</p>
+                </div>
               </div>
             </motion.div>
           </div>

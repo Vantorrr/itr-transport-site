@@ -64,26 +64,10 @@ export default function Home() {
 
         {/* Hero Section */}
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-          {/* Background Video */}
-          <div className="absolute inset-0 z-0">
-            <video
-              autoPlay
-              muted
-              loop
-              playsInline
-              className="absolute inset-0 w-full h-full object-cover"
-              poster="/images/video-poster.jpg" // fallback image
-            >
-              <source src="/videos/hero-video.mp4" type="video/mp4" />
-              <source src="/videos/hero-video.webm" type="video/webm" />
-              {/* Fallback for browsers that don't support video */}
-              <div className="absolute inset-0 hero-gradient"></div>
-            </video>
-            {/* Video overlay for better text readability */}
-            <div className="absolute inset-0 bg-black/40"></div>
-          </div>
+          {/* Beautiful gradient background */}
+          <div className="absolute inset-0 bg-gradient-to-br from-primary via-secondary to-primary z-0"></div>
           
-          {/* Fallback particles for when video is not available */}
+          {/* Animated particles */}
           <motion.div
             style={{ y: y1, willChange: 'transform' }}
             className="absolute inset-0 opacity-20 z-10"
